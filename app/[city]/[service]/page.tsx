@@ -16,9 +16,8 @@ export default async function LeadPage({ params }: { params: Promise<{ city: str
     return (
       <div className="min-h-screen bg-white text-right" dir="rtl">
         <nav className="p-4 border-b bg-slate-50">
-          <div className="max-w-4xl mx-auto flex justify-between items-center">
+          <div className="max-w-4xl mx-auto flex justify-center">
             <span className="font-bold text-blue-900">KTV Israel</span>
-            <Link href="/" className="text-blue-600 font-medium">← לכל אזורי השירות</Link>
           </div>
         </nav>
 
