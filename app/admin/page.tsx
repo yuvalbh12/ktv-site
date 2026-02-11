@@ -1,18 +1,28 @@
 'use client';
 import { useState, useEffect } from 'react';
 
+interface Lead {
+  date: string;
+  source: string;
+  status: string;
+}
+
 export default function AdminPage() {
-  const [leads, setLeads] = useState([]);
+  const [leads, setLeads] = useState<Lead[]>([]);
 
   useEffect(() => {
-    const saved = localStorage.getItem('ktv_leads');
-    if (saved) setLeads(JSON.parse(saved));
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('ktv_leads');
+      if (saved) setLeads(JSON.parse(saved));
+    }
   }, []);
 
-  const deleteLead = (index) => {
+  const deleteLead = (index: number) => {
     const newLeads = leads.filter((_, i) => i !== index);
     setLeads(newLeads);
-    localStorage.setItem('ktv_leads', JSON.stringify(newLeads));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('ktv_leads', JSON.stringify(newLeads));
+    }
   };
 
   return (
@@ -53,7 +63,7 @@ export default function AdminPage() {
                       </div>
                     </td>
                     <td className="p-4 text-center">
-                      <button 
+                      <button
                         onClick={() => deleteLead(i)}
                         className="text-red-500 hover:bg-red-50 px-3 py-1 rounded-md text-sm border border-red-200"
                       >
