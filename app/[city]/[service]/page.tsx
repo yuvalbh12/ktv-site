@@ -1,16 +1,6 @@
 import { SERVICES, CITIES } from '../../../constants';
 import Link from 'next/link';
 
-
-  const handleWhatsAppClick = () => {
-    const leads = JSON.parse(localStorage.getItem("ktv_leads") || "[]");
-    const newLead = {
-      date: new Date().toLocaleString("he-IL"),
-      source: window.location.pathname,
-      status: "חדש - וואטסאפ"
-    };
-    localStorage.setItem("ktv_leads", JSON.stringify([newLead, ...leads]));
-  };
 export default async function LeadPage({ params }: { params: Promise<{ city: string, service: string }> }) {
   const { city: rawCity, service: rawService } = await params;
   const city = decodeURIComponent(rawCity);
@@ -19,6 +9,18 @@ export default async function LeadPage({ params }: { params: Promise<{ city: str
   // כאן תוכלי להחליף למספר האמיתי שלו בעתיד
   const WHATSAPP_NUMBER = "972533707570";
   const message = encodeURIComponent(`היי KTV, הגעתי מהאתר. אני מעוניין ב${service} ב${city}. אפשר לקבל פרטים?`);
+
+  const handleWhatsAppClick = () => {
+    if (typeof window !== 'undefined') {
+      const leads = JSON.parse(localStorage.getItem("ktv_leads") || "[]");
+      const newLead = {
+        date: new Date().toLocaleString("he-IL"),
+        source: window.location.pathname,
+        status: "חדש - וואטסאפ"
+      };
+      localStorage.setItem("ktv_leads", JSON.stringify([newLead, ...leads]));
+    }
+  };
 
   return (
     <div className="min-h-screen bg-white text-right" dir="rtl">
@@ -54,6 +56,7 @@ export default async function LeadPage({ params }: { params: Promise<{ city: str
 
         <a
           href={`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`}
+          onClick={handleWhatsAppClick}
           className="block w-full bg-green-500 text-white text-center py-6 rounded-2xl text-2xl font-bold shadow-2xl hover:bg-green-600 transition-all hover:scale-[1.02] active:scale-95"
         >
           שלחו הודעה לתיאום ב{city}
