@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "KTV Working Drone",
-  description: "ניקוי חלונות וחזיתות בגובה באמצעות רחפנים",
+  title: "KTV - ניקוי חלונות מקצועי",
+  description: "שירות ניקוי חלונות מקצועי ברעננה והסביבה",
   verification: {
     google: "fsKjpHA48xBRm_zgTjQ1TYH4ssGZu1Emwpaevmw5qjo"
   },
