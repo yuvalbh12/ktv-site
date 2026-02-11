@@ -36,7 +36,7 @@ export default async function LeadPage({ params }: { params: Promise<{ city: str
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <div className="border-2 border-slate-100 p-6 rounded-2xl">
               <h3 className="font-bold text-xl mb-2">⏱️ חיסכון בזמן</h3>
-              <p>אנחנו מסיימים ביום עבודה אחד מה שלוקח לאחרים שבוע.</p>
+              <p>אנחנו מספקים פתרונות מהירים ויעילים שחוסכים זמן יקר.</p>
             </div>
             <div className="border-2 border-slate-100 p-6 rounded-2xl">
               <h3 className="font-bold text-xl mb-2">🛡️ בטיחות מלאה</h3>
