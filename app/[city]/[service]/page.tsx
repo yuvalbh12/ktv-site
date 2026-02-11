@@ -1,6 +1,16 @@
 import { SERVICES, CITIES } from '../../../constants';
 import Link from 'next/link';
 
+
+  const handleWhatsAppClick = () => {
+    const leads = JSON.parse(localStorage.getItem("ktv_leads") || "[]");
+    const newLead = {
+      date: new Date().toLocaleString("he-IL"),
+      source: window.location.pathname,
+      status: "חדש - וואטסאפ"
+    };
+    localStorage.setItem("ktv_leads", JSON.stringify([newLead, ...leads]));
+  };
 export default async function LeadPage({ params }: { params: Promise<{ city: string, service: string }> }) {
   const { city: rawCity, service: rawService } = await params;
   const city = decodeURIComponent(rawCity);
