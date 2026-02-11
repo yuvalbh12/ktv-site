@@ -1,3 +1,4 @@
+import { track } from "@vercel/analytics";
 import { SERVICES, CITIES } from '../constants';
 import Link from 'next/link';
 
