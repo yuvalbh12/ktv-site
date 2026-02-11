@@ -5,6 +5,9 @@ interface Lead {
   date: string;
   source: string;
   status: string;
+  deviceType?: string;
+  timeOnPage?: number;
+  referrer?: string;
 }
 
 export default function AdminPage() {
@@ -157,6 +160,27 @@ export default function AdminPage() {
                             <span className="inline-block px-3 py-1 rounded-lg bg-slate-100 text-slate-700 text-sm">
                               🔧 {service}
                             </span>
+                            <div className="flex gap-2 mt-1 text-xs text-slate-500">
+                              {lead.deviceType && (
+                                <span className="flex items-center gap-1">
+                                  {lead.deviceType === 'Mobile' ? '📱' : '🖥️'} {lead.deviceType}
+                                </span>
+                              )}
+                              {lead.timeOnPage && (
+                                <span className="flex items-center gap-1">
+                                  ⏱️ {lead.timeOnPage}s
+                                </span>
+                              )}
+                              {lead.referrer && (
+                                <span className="flex items-center gap-1">
+                                  {lead.referrer === 'Google' && '🔍'}
+                                  {lead.referrer === 'Facebook' && '📘'}
+                                  {lead.referrer === 'Direct' && '🎯'}
+                                  {lead.referrer === 'Other' && '🌐'}
+                                  {lead.referrer}
+                                </span>
+                              )}
+                            </div>
                           </div>
                         </td>
                         <td className="p-4 text-center">
