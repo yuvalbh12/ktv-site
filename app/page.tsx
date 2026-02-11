@@ -6,7 +6,7 @@ export default function Home() {
     <div className="min-h-screen bg-slate-50 text-right" dir="rtl">
       <header className="bg-blue-900 text-white py-20 px-4 text-center">
         <h1 className="text-6xl font-black mb-4">KTV Israel</h1>
-        <p className="text-2xl opacity-90 font-light">מכונת הלידים הטכנולוגית לניקוי בגובה</p>
+        <p className="text-2xl opacity-90 font-light">KTV Israel - ניקוי חלונות בטכנולוגיה מתקדמת</p>
       </header>
 
       <main className="container mx-auto py-16 px-6">
