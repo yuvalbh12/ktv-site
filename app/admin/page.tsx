@@ -61,8 +61,31 @@ export default function AdminPage() {
                       <div className="text-xs text-slate-500">{lead.date.split(',')[1]}</div>
                     </td>
                     <td className="p-4">
-                      <div className="inline-block px-2 py-1 rounded bg-blue-100 text-blue-800 text-sm mb-1">
-                        {decodeURIComponent(lead.source).replace(/\//g, ' > ').substring(3)}
+                      <div className="flex flex-col gap-1">
+                        <div className="inline-block px-2 py-1 rounded bg-blue-100 text-blue-800 text-sm mb-1">
+                          {decodeURIComponent(lead.source).replace(/\//g, ' > ').substring(3)}
+                        </div>
+                        <div className="flex gap-2 text-xs text-slate-500">
+                          {lead.deviceType && (
+                            <span className="flex items-center gap-1">
+                              {lead.deviceType === 'Mobile' ? '📱' : '🖥️'} {lead.deviceType}
+                            </span>
+                          )}
+                          {lead.timeOnPage && (
+                            <span className="flex items-center gap-1">
+                              ⏱️ {lead.timeOnPage}s
+                            </span>
+                          )}
+                          {lead.referrer && (
+                            <span className="flex items-center gap-1">
+                              {lead.referrer === 'Google' && '🔍'}
+                              {lead.referrer === 'Facebook' && '📘'}
+                              {lead.referrer === 'Direct' && '🎯'}
+                              {lead.referrer === 'Other' && '🌐'}
+                              {lead.referrer}
+                            </span>
+                          )}
+                        </div>
                       </div>
                     </td>
                     <td className="p-4 text-center">
