@@ -75,27 +75,21 @@ export default async function LeadPage({ params }: { params: Promise<{ city: str
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold mb-4">שירות ארצי - אנחנו מגיעים לכל מקום</h3>
-              <p className="text-slate-300">כיסוי מלא בכל רחבי הארץ עם טכנולוגיית רחפנים מתקדמת</p>
+              <p className="text-slate-300">צוותי הרחפנים של KTV Israel פרוסים בנקודות אסטרטגיות כדי להעניק שירות מהיר ובטיחותי בכל חלקי הארץ</p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
               {[
-                'תל אביב',
                 'ירושלים',
+                'תל אביב',
                 'חיפה',
                 'ראשון לציון',
                 'פתח תקווה',
                 'אשדוד',
                 'נתניה',
-                'בני ברק',
+                'באר שבע',
                 'חולון',
-                'רמת גן',
-                'רחובות',
-                'הרצליה',
-                'מודיעין',
-                'כפר סבא',
-                'רעננה',
-                'באר שבע'
+                'בני ברק'
               ].map((cityName) => (
                 <Link
                   key={cityName}
@@ -108,7 +102,7 @@ export default async function LeadPage({ params }: { params: Promise<{ city: str
             </div>
 
             <div className="text-center mt-8 pt-8 border-t border-slate-700">
-              <p className="text-slate-400">© 2026 KTV Israel - פריסה ארצית מלאה</p>
+              <p className="text-slate-400"> 2026 KTV Israel - פריסה ארצית מלאה</p>
             </div>
           </div>
         </footer>
