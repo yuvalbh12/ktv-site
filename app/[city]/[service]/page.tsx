@@ -70,6 +70,48 @@ export default async function LeadPage({ params }: { params: Promise<{ city: str
             מענה מהיר בוואטסאפ תוך פחות מ-30 דקות
           </p>
         </main>
+
+        <footer className="bg-slate-900 text-white py-12 mt-20">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold mb-4">שירות ארצי - אנחנו מגיעים לכל מקום</h3>
+              <p className="text-slate-300">כיסוי מלא בכל רחבי הארץ עם טכנולוגיית רחפנים מתקדמת</p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              {[
+                'תל אביב',
+                'ירושלים',
+                'חיפה',
+                'ראשון לציון',
+                'פתח תקווה',
+                'אשדוד',
+                'נתניה',
+                'בני ברק',
+                'חולון',
+                'רמת גן',
+                'רחובות',
+                'הרצליה',
+                'מודיעין',
+                'כפר סבא',
+                'רעננה',
+                'באר שבע'
+              ].map((cityName) => (
+                <Link
+                  key={cityName}
+                  href={`/${encodeURIComponent(cityName)}/ניקוי-חלונות-בגובה`}
+                  className="text-slate-300 hover:text-white hover:underline transition-colors text-center"
+                >
+                  {cityName}
+                </Link>
+              ))}
+            </div>
+
+            <div className="text-center mt-8 pt-8 border-t border-slate-700">
+              <p className="text-slate-400">© 2026 KTV Israel - פריסה ארצית מלאה</p>
+            </div>
+          </div>
+        </footer>
       </div>
     );
   } catch (error) {
