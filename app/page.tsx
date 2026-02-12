@@ -41,6 +41,30 @@ export default function Home() {
                     • ניקוי בניינים ב{city}
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href={`/${encodeURIComponent(city)}/רחפן`}
+                    className="text-blue-600 hover:text-blue-800 hover:underline text-sm"
+                  >
+                    • רחפן ב{city}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={`/${encodeURIComponent(city)}/גגות`}
+                    className="text-blue-600 hover:text-blue-800 hover:underline text-sm"
+                  >
+                    • גגות ב{city}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={`/${encodeURIComponent(city)}/סולארי`}
+                    className="text-blue-600 hover:text-blue-800 hover:underline text-sm"
+                  >
+                    • סולארי ב{city}
+                  </Link>
+                </li>
                 {SERVICES.map((service) => (
                   <li key={service}>
                     <Link
