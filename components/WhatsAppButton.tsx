@@ -81,10 +81,10 @@ export default function WhatsAppButton({ href, city, message }: WhatsAppButtonPr
         {/* Urgency Badges */}
         <div className="flex justify-center gap-2 mb-2 md:mb-3">
           <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full font-bold animate-pulse">
-            🔥 מוגבל
+            🔥
           </span>
           <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-bold">
-            ⏰ 30 שניות תגובה
+            ⏰ תגובה מהירה
           </span>
         </div>
 
