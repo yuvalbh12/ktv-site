@@ -68,12 +68,14 @@ export default function WhatsAppButton({ href, city }: WhatsAppButtonProps) {
   };
 
   return (
-    <a
-      href={href}
-      onClick={handleWhatsAppClick}
-      className="block w-full bg-green-500 text-white text-center py-6 rounded-2xl text-2xl font-bold shadow-2xl hover:bg-green-600 transition-all hover:scale-[1.02] active:scale-95"
-    >
-      שלחו הודעה לתיאום ב{city}
-    </a>
+    <div className="fixed bottom-0 left-0 w-full p-4 bg-white/80 backdrop-blur-md border-t md:relative md:bg-transparent md:border-none md:p-0 z-50">
+      <a
+        href={href}
+        onClick={handleWhatsAppClick}
+        className="block w-full bg-green-500 text-white text-center py-4 md:py-6 rounded-2xl text-xl md:text-2xl font-bold shadow-2xl hover:bg-green-600 transition-all hover:scale-[1.02] active:scale-95 animate-bounce-subtle"
+      >
+        שלחו הודעה לתיאום ב{city}
+      </a>
+    </div>
   );
 }
