@@ -76,7 +76,7 @@ export default async function GeneralCleaningPage({ params }: { params: Promise<
           <div className="bg-blue-50 rounded-2xl p-8 mb-12">
             <h3 className="text-2xl font-bold text-slate-900 mb-4">למה לבחור את KTV Israel?</h3>
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 mb-12">
-              <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">טכנולולות מקצועיים</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">טכנולוגיות מקצועיות</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-white rounded-xl p-6 shadow-lg border border-blue-100">
                   <div className="text-3xl mb-4">🧪</div>
@@ -107,6 +107,36 @@ export default async function GeneralCleaningPage({ params }: { params: Promise<
                 <p className="text-slate-600 text-sm leading-relaxed">
                   יכולת הגעה ל-100+ מטרים ללא צורך בפיגומים.
                 </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-slate-50 to-slate-100 rounded-2xl p-8 mb-12">
+            <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">פתרונות תעשייתיים</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-slate-200 hover:border-blue-300 transition-colors">
+                <div className="text-4xl mb-4">☀️</div>
+                <h4 className="font-bold text-slate-900 mb-3">פאנלים סולאריים</h4>
+                <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                  ניקוי ותחזוקת פאנלים סולאריים עם טכנוסה מלאה.
+                </p>
+                <WhatsAppButton city={city} message={`היי KTV, אני מעוניין בפאנלים סולאריים ב${city}. אפשר לקבל פרטים?`} />
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-slate-200 hover:border-blue-300 transition-colors">
+                <div className="text-4xl mb-4">🏢</div>
+                <h4 className="font-bold text-slate-900 mb-3">בניינים גבוהים</h4>
+                <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                  ניקוי חזיתות וחלונות בבניינים גבוהים ללא צורך בפיגומים.
+                </p>
+                <WhatsAppButton city={city} message={`היי KTV, אני מעוניין בניקוי בניינים גבוהים ב${city}. אפשר לקבל פרטים?`} />
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-slate-200 hover:border-blue-300 transition-colors">
+                <div className="text-4xl mb-4">🏛️</div>
+                <h4 className="font-bold text-slate-900 mb-3">אבני סטון</h4>
+                <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                  ניקוי ושטיפת חזיתות באבני סטון עם טכנוסה מלאה.
+                </p>
+                <WhatsAppButton city={city} message={`היי KTV, אני מעוניין בניקוי אבני סטון ב${city}. אפשר לקבל פרטים?`} />
               </div>
             </div>
           </div>
