@@ -91,7 +91,7 @@ export default async function LeadPage({ params }: { params: Promise<{ city: str
           <WhatsAppButton city={city} message={message} />
 
           <p className="text-center mt-6 text-slate-400 text-sm">
-            מענה מהיר בוואטסאפ תוך פחות מ-30 דקות
+            מענה מהיר בוואטסאפ
           </p>
         </main>
 
