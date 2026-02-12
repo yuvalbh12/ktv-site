@@ -171,6 +171,33 @@ export default async function SolarPage({ params }: { params: Promise<{ city: st
             </ul>
           </div>
 
+          <div className="bg-gradient-to-r from-yellow-50 to-amber-50 rounded-2xl p-8 mb-12">
+            <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">הטכנולוגיה מאחורי KTV</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-yellow-100">
+                <div className="text-3xl mb-4">🧪</div>
+                <h4 className="font-bold text-yellow-900 mb-3">SelfCleaner™</h4>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  חומר ניקוי בלעדי שמתפרק ביולוגית ושומר על החלון נקי לאורך זמן.
+                </p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-yellow-100">
+                <div className="text-3xl mb-4">🛠️</div>
+                <h4 className="font-bold text-yellow-900 mb-3">KTV Care</h4>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  תוכניות תחזוקה שנתיות לבנייני משרדים ומוסדות.
+                </p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-yellow-100">
+                <div className="text-3xl mb-4">🚁</div>
+                <h4 className="font-bold text-yellow-900 mb-3">ניקוי בגובה רב</h4>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  יכולת הגעה ל-100+ מטרים ללא צורך בפיגומים.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <h3 className="text-2xl font-bold text-slate-900 mb-4">מוכנים לפתרון סולארי מתקדם ב{city}?</h3>
             <p className="text-slate-600 mb-6">צוות המומחים שלנו מחכה לספק לכם את השירות הטוב ביותר</p>
