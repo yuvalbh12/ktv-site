@@ -2,6 +2,13 @@
 
 import { useEffect, useState } from 'react';
 
+// Declare gtag function for TypeScript
+declare global {
+  interface Window {
+    gtag?: (command: string, eventId: string, eventParams?: Record<string, any>) => void;
+  }
+}
+
 interface WhatsAppButtonProps {
   href: string;
   city: string;
@@ -35,6 +42,17 @@ export default function WhatsAppButton({ href, city }: WhatsAppButtonProps) {
   const handleWhatsAppClick = () => {
     if (typeof window !== 'undefined') {
       const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+
+      // Track Google Analytics event
+      if (window.gtag) {
+        window.gtag('event', 'generate_lead', {
+          city: city,
+          device_type: deviceType,
+          time_on_page: timeOnPage,
+          referrer: referrer,
+          page_path: window.location.pathname
+        });
+      }
 
       const leads = JSON.parse(localStorage.getItem("ktv_leads") || "[]");
       const newLead = {
