@@ -57,24 +57,45 @@ export default async function GeneralCleaningPage({ params }: { params: Promise<
 
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">השירותים שלנו ב{city}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {services.map((service) => (
-                <div key={service.link} className="border-2 border-slate-100 p-6 rounded-2xl hover:border-blue-300 transition-colors">
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
-                  <p className="text-slate-600 mb-4">{service.desc}</p>
-                  <Link
-                    href={`/${encodeURIComponent(city)}/${service.link}`}
-                    className="inline-block text-blue-600 hover:text-blue-800 font-medium"
-                  >
-                    פרטים נוספים →
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">בחרו את השירות המתאים לכם</h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
+                <button className="bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-blue-400 hover:shadow-lg transition-all group">
+                  <div className="text-4xl mb-3">🧹</div>
+                  <h3 className="font-bold text-slate-900 mb-2">ניקוי חלונות בגובה</h3>
+                  <p className="text-slate-600 text-sm">פתרון חדשני לניקוי חלונות גבוהים ללא פיגומים</p>
+                </button>
+                <button className="bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-blue-400 hover:shadow-lg transition-all group">
+                  <div className="text-4xl mb-3">🏛️</div>
+                  <h3 className="font-bold text-slate-900 mb-2">ניקוי חזיתות</h3>
+                  <p className="text-slate-600 text-sm">ניקוי חזיתות בניינים עם טכנולוגיית אוסמוזה</p>
+                </button>
+                <button className="bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-blue-400 hover:shadow-lg transition-all group">
+                  <div className="text-4xl mb-3">🏢</div>
+                  <h3 className="font-bold text-slate-900 mb-2">ניקוי בניינים</h3>
+                  <p className="text-slate-600 text-sm">פתרונות ניקוי מלאים לכל סוגי הבניינים</p>
+                </button>
+                <button className="bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-blue-400 hover:shadow-lg transition-all group">
+                  <div className="text-4xl mb-3">☀️</div>
+                  <h3 className="font-bold text-slate-900 mb-2">פאנלים סולאריים</h3>
+                  <p className="text-slate-600 text-sm">הגברת יעילות הפאנלים עם ניקוי מקצועי</p>
+                </button>
+                <button className="bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-blue-400 hover:shadow-lg transition-all group">
+                  <div className="text-4xl mb-3">🛠️</div>
+                  <h3 className="font-bold text-slate-900 mb-2">KTV Care</h3>
+                  <p className="text-slate-600 text-sm">תוכניות תחזוקה שנתיות למוסדות</p>
+                </button>
+              </div>
 
-          <div className="bg-blue-50 rounded-2xl p-8 mb-12">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">למה לבחור את KTV Israel?</h3>
+              <div className="bg-blue-50 rounded-2xl p-8 text-center">
+                <h3 className="text-xl font-bold text-slate-900 mb-4">בחרתם: ניקוי חלונות בגובה</h3>
+                <div className="bg-white rounded-xl p-6 inline-block">
+                  <h4 className="font-bold text-blue-900 mb-3 text-lg">ניקוי חלונות בגובה</h4>
+                  <p className="text-slate-600 mb-4">פתרון חדשני לניקוי חלונות גבוהים ללא פיגומים עם רחפנים מתקדמים.</p>
+                  <WhatsAppButton city={city} message={`היי KTV, אני מעוניין בניקוי חלונות בגובה ב${city}. אפשר לקבל פרטים?`} />
+                </div>
+              </div>
+            </div>
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 mb-12">
               <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">טכנולוגיות מקצועיות</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
