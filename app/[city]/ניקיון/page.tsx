@@ -48,7 +48,7 @@ export default async function GeneralCleaningPage({ params }: { params: Promise<
         <main className="max-w-4xl mx-auto py-16 px-6">
           <div className="text-center mb-12">
             <h1 className="text-5xl font-black text-slate-900 mb-6 leading-tight">
-              שירותי ניקיון ב{city} <br /><span className="text-blue-600">הפתרון המקצועי והמתקדם</span>
+              שירותי ניקיון מתקדמים ב{city} <br /><span className="text-green-600">הפתרון המקצועי והמתקדם</span>
             </h1>
             <p className="text-2xl text-slate-600 mb-8 leading-relaxed">
               KTV Israel מספקים מגוון רחב של שירותי ניקיון ב{city}.
@@ -128,7 +128,6 @@ export default async function GeneralCleaningPage({ params }: { params: Promise<
               </ul>
             </div>
           </div>
-          </div>
 
           <div className="bg-gradient-to-r from-slate-50 to-slate-100 rounded-2xl p-8 mb-12">
             <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">פתרונות תעשייתיים</h3>
@@ -163,68 +162,103 @@ export default async function GeneralCleaningPage({ params }: { params: Promise<
           <div className="bg-white rounded-2xl p-8 mb-12">
             <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">גלריית עבודות - רחפנים בפעולה</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="relative group overflow-hidden rounded-xl">
-                  <div className="aspect-video bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
-                    <span className="text-6xl text-green-500">🏢</span>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
-                    <p className="text-sm font-medium">ניקוי חזיתות זכוכית</p>
-                  </div>
+              <div className="relative group overflow-hidden rounded-xl">
+                <div className="aspect-video bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+                  <span className="text-6xl text-green-500">🏢</span>
                 </div>
-                <div className="relative group overflow-hidden rounded-xl">
-                  <div className="aspect-video bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                    <span className="text-6xl text-blue-500">🏛️</span>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
-                    <p className="text-sm font-medium">הסרת פיח מאבן ירושלים</p>
-                  </div>
-                </div>
-                <div className="relative group overflow-hidden rounded-xl">
-                  <div className="aspect-video bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center">
-                    <span className="text-6xl text-yellow-500">☀️</span>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
-                    <p className="text-sm font-medium">תחזוקת פאנלים סולאריים</p>
-                  </div>
-                </div>
-                <div className="relative group overflow-hidden rounded-xl">
-                  <div className="aspect-video bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
-                    <span className="text-6xl text-purple-500">🧹</span>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
-                    <p className="text-sm font-medium">ניקוי חלונות בגובה</p>
-                  </div>
-                </div>
-                <div className="relative group overflow-hidden rounded-xl">
-                  <div className="aspect-video bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
-                    <span className="text-6xl text-orange-500">🔍</span>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
-                    <p className="text-sm font-medium">צילום תרמי למבנים</p>
-                  </div>
-                </div>
-                <div className="relative group overflow-hidden rounded-xl">
-                  <div className="aspect-video bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
-                    <span className="text-6xl text-red-500">🏠</span>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
-                    <p className="text-sm font-medium">בדיקות גגות ומרפסות</p>
-                  </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
+                  <p className="text-sm font-medium">ניקוי חזיתות זכוכית</p>
                 </div>
               </div>
-              <p className="text-center text-slate-500 text-sm mt-6">
-                צילומים מפרויקטים אמיתיים של צוות KTV Israel בעבודה
-              </p>
+              <div className="relative group overflow-hidden rounded-xl">
+                <div className="aspect-video bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                  <span className="text-6xl text-blue-500">🏛️</span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
+                  <p className="text-sm font-medium">הסרת פיח מאבן ירושלים</p>
+                </div>
+              </div>
+              <div className="relative group overflow-hidden rounded-xl">
+                <div className="aspect-video bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center">
+                  <span className="text-6xl text-yellow-500">☀️</span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
+                  <p className="text-sm font-medium">תחזוקת פאנלים סולאריים</p>
+                </div>
+              </div>
+              <div className="relative group overflow-hidden rounded-xl">
+                <div className="aspect-video bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+                  <span className="text-6xl text-purple-500">🧹</span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
+                  <p className="text-sm font-medium">ניקוי חלונות בגובה</p>
+                </div>
+              </div>
+              <div className="relative group overflow-hidden rounded-xl">
+                <div className="aspect-video bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
+                  <span className="text-6xl text-orange-500">🔍</span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
+                  <p className="text-sm font-medium">צילום תרמי למבנים</p>
+                </div>
+              </div>
+              <div className="relative group overflow-hidden rounded-xl">
+                <div className="aspect-video bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
+                  <span className="text-6xl text-red-500">🏠</span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
+                  <p className="text-sm font-medium">בדיקות גגות ומרפסות</p>
+                </div>
+              </div>
+            </div>
+            <p className="text-center text-slate-500 text-sm mt-6">
+              צילומים מפרויקטים אמיתיים של צוות KTV Israel בעבודה
+            </p>
+          </div>
+
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">מוכנים לניקוי מקצועי ב{city}?</h3>
+            <p className="text-slate-600 mb-6">צוות המומחים שלנו מחכה לספק לכם את השירות הטוב ביותר</p>
+            <WhatsAppButton city={city} message={message} />
+          </div>
+        </main>
+
+        <footer className="bg-slate-900 text-white py-12 mt-20">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold mb-4">שירות ארצי - אנחנו מגיעים לכל מקום</h3>
+              <p className="text-slate-300">צוותי הרחפנים של KTV Israel פרוסים בנקודות אסטרטגיות כדי להעניק שירות מהיר ובטיחותי בכל חלקי הארץ</p>
             </div>
 
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">מוכנים לניקוי מקצועי ב{city}?</h3>
-              <p className="text-slate-600 mb-6">צוות המומחים שלנו מחכה לספק לכם את השירות הטוב ביותר</p>
-              <WhatsAppButton city={city} message={message} />
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              {[
+                'ירושלים',
+                'תל אביב',
+                'חיפה',
+                'ראשון לציון',
+                'פתח תקווה',
+                'אשדוד',
+                'נתניה',
+                'באר שבע',
+                'חולון',
+                'בני ברק'
+              ].map((cityName) => (
+                <Link
+                  key={cityName}
+                  href={`/${encodeURIComponent(cityName)}/ניקיון`}
+                  className="text-slate-300 hover:text-white hover:underline transition-colors text-center"
+                >
+                  {cityName}
+                </Link>
+              ))}
             </div>
-          </main >
-        </div >
-      </div >
+
+            <div className="text-center mt-8 pt-8 border-t border-slate-700">
+              <p className="text-slate-400">© 2026 KTV Israel - פריסה ארצית מלאה</p>
+            </div>
+          </div>
+        </footer>
+      </div>
     );
   } catch (error) {
     console.error('Error in GeneralCleaningPage:', error);
