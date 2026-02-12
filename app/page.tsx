@@ -17,6 +17,30 @@ export default function Home() {
             <div key={city} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
               <h3 className="text-xl font-bold text-blue-900 mb-4 border-b pb-2">{city}</h3>
               <ul className="space-y-2">
+                <li>
+                  <Link
+                    href={`/${encodeURIComponent(city)}/ניקוי-חלונות`}
+                    className="text-blue-600 hover:text-blue-800 hover:underline text-sm font-medium"
+                  >
+                    • ניקוי חלונות ב{city}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={`/${encodeURIComponent(city)}/ניקיון`}
+                    className="text-blue-600 hover:text-blue-800 hover:underline text-sm"
+                  >
+                    • ניקיון ב{city}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={`/${encodeURIComponent(city)}/ניקוי-בניינים`}
+                    className="text-blue-600 hover:text-blue-800 hover:underline text-sm"
+                  >
+                    • ניקוי בניינים ב{city}
+                  </Link>
+                </li>
                 {SERVICES.map((service) => (
                   <li key={service}>
                     <Link
