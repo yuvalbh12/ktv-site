@@ -10,14 +10,22 @@ declare global {
 }
 
 interface WhatsAppButtonProps {
-  href: string;
+  href?: string;
   city: string;
+  message?: string;
 }
 
-export default function WhatsAppButton({ href, city }: WhatsAppButtonProps) {
+export default function WhatsAppButton({ href, city, message }: WhatsAppButtonProps) {
   const [startTime] = useState(Date.now());
   const [deviceType, setDeviceType] = useState('');
   const [referrer, setReferrer] = useState('');
+
+  // Generate WhatsApp href if not provided
+  const whatsappHref = href || (() => {
+    const WHATSAPP_NUMBER = "972533707570";
+    const defaultMessage = message || `היי KTV, הגעתי מהאתר. אני מעוניין בשירותים ב${city}. אפשר לקבל פרטים?`;
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(defaultMessage)}`;
+  })();
 
   useEffect(() => {
     // Detect device type
@@ -70,7 +78,7 @@ export default function WhatsAppButton({ href, city }: WhatsAppButtonProps) {
   return (
     <div className="fixed bottom-0 left-0 w-full p-4 bg-white/80 backdrop-blur-md border-t md:relative md:bg-transparent md:border-none md:p-0 z-50">
       <a
-        href={href}
+        href={whatsappHref}
         onClick={handleWhatsAppClick}
         className="block w-full bg-green-500 text-white text-center py-4 md:py-6 rounded-2xl text-xl md:text-2xl font-bold shadow-2xl hover:bg-green-600 transition-all hover:scale-[1.02] active:scale-95 animate-bounce-subtle"
       >

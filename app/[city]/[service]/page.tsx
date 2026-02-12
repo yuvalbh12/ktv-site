@@ -28,10 +28,7 @@ export default async function LeadPage({ params }: { params: Promise<{ city: str
     const city = decodeURIComponent(rawCity);
     const service = decodeURIComponent(rawService);
 
-    // כאן תוכלי להחליף למספר האמיתי שלו בעתיד
-    const WHATSAPP_NUMBER = "972533707570";
-    const message = encodeURIComponent(`היי KTV, הגעתי מהאתר. אני מעוניין ב${service} ב${city}. אפשר לקבל פרטים?`);
-    const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+    const message = `היי KTV, הגעתי מהאתר. אני מעוניין ב${service} ב${city}. אפשר לקבל פרטים?`;
 
     return (
       <div className="min-h-screen bg-white text-right" dir="rtl">
@@ -64,7 +61,7 @@ export default async function LeadPage({ params }: { params: Promise<{ city: str
             </div>
           </div>
 
-          <WhatsAppButton href={whatsappHref} city={city} />
+          <WhatsAppButton city={city} message={message} />
 
           <p className="text-center mt-6 text-slate-400 text-sm">
             מענה מהיר בוואטסאפ תוך פחות מ-30 דקות

@@ -26,9 +26,7 @@ export default async function RoofsPage({ params }: { params: Promise<{ city: st
     const { city: rawCity } = await params;
     const city = decodeURIComponent(rawCity);
 
-    const WHATSAPP_NUMBER = "972533707570";
-    const message = encodeURIComponent(`היי KTV, הגעתי מהאתר. אני מעוניין בשירותי גגות ב${city}. אפשר לקבל פרטים?`);
-    const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+    const message = `היי KTV, הגעתי מהאתר. אני מעוניין בשירותי גגות ב${city}. אפשר לקבל פרטים?`;
 
     const roofServices = [
       { title: "בדיקות גגות", desc: "בדיקות מקיפות של גגות עם רחפנים ומצלמות תרמיות", icon: "🔍" },
@@ -54,10 +52,10 @@ export default async function RoofsPage({ params }: { params: Promise<{ city: st
               פתרונות גגות ב{city} <br /><span className="text-blue-600">הטכנולוגיה ששומרת על הגג</span>
             </h1>
             <p className="text-2xl text-slate-600 mb-8 leading-relaxed">
-              KTV Israel מספקים פתרונות מתקדמים לגגות ב{city}. 
+              KTV Israel מספקים פתרונות מתקדמים לגגות ב{city}.
               בדיקות, ניקוי ותחזוקה עם רחפנים וטכנולוגיה חדשנית.
             </p>
-            <WhatsAppButton href={whatsappHref} city={city} />
+            <WhatsAppButton city={city} message={message} />
           </div>
 
           <div className="mb-16">
@@ -150,7 +148,7 @@ export default async function RoofsPage({ params }: { params: Promise<{ city: st
           <div className="text-center">
             <h3 className="text-2xl font-bold text-slate-900 mb-4">מוכנים לבדיקת גגות מקצועית ב{city}?</h3>
             <p className="text-slate-600 mb-6">צוות המומחים שלנו מחכה לספק לכם את השירות הטוב ביותר</p>
-            <WhatsAppButton href={whatsappHref} city={city} />
+            <WhatsAppButton city={city} message={message} />
           </div>
         </main>
 
@@ -160,7 +158,7 @@ export default async function RoofsPage({ params }: { params: Promise<{ city: st
               <h3 className="text-2xl font-bold mb-4">שירות ארצי - אנחנו מגיעים לכל מקום</h3>
               <p className="text-slate-300">צוותי הרחפנים של KTV Israel פרוסים בנקודות אסטרטגיות כדי להעניק שירות מהיר ובטיחותי בכל חלקי הארץ</p>
             </div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
               {[
                 'ירושלים',
@@ -183,7 +181,7 @@ export default async function RoofsPage({ params }: { params: Promise<{ city: st
                 </Link>
               ))}
             </div>
-            
+
             <div className="text-center mt-8 pt-8 border-t border-slate-700">
               <p className="text-slate-400">© 2026 KTV Israel - פריסה ארצית מלאה</p>
             </div>

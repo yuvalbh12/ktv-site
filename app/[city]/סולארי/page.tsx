@@ -26,9 +26,7 @@ export default async function SolarPage({ params }: { params: Promise<{ city: st
     const { city: rawCity } = await params;
     const city = decodeURIComponent(rawCity);
 
-    const WHATSAPP_NUMBER = "972533707570";
-    const message = encodeURIComponent(`היי KTV, הגעתי מהאתר. אני מעוניין בשירותים סולאריים ב${city}. אפשר לקבל פרטים?`);
-    const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+    const message = `היי KTV, הגעתי מהאתר. אני מעוניין בשירותים סולאריים ב${city}. אפשר לקבל פרטים?`;
 
     const solarServices = [
       { title: "ניקוי פאנלים סולאריים", desc: "ניקוי מקצועי של פאנלים סולאריים להגברת יעילות", icon: "🧹" },
@@ -57,7 +55,7 @@ export default async function SolarPage({ params }: { params: Promise<{ city: st
               KTV Israel מספקים פתרונות סולאריים מתקדמים ב{city}.
               ניקוי, תחזוקה והתקנה של פאנלים סולאריים עם טכנולוגיית רחפנים.
             </p>
-            <WhatsAppButton href={whatsappHref} city={city} />
+            <WhatsAppButton city={city} message={message} />
           </div>
 
           <div className="mb-16">
@@ -176,7 +174,7 @@ export default async function SolarPage({ params }: { params: Promise<{ city: st
           <div className="text-center">
             <h3 className="text-2xl font-bold text-slate-900 mb-4">מוכנים לפתרון סולארי מתקדם ב{city}?</h3>
             <p className="text-slate-600 mb-6">צוות המומחים שלנו מחכה לספק לכם את השירות הטוב ביותר</p>
-            <WhatsAppButton href={whatsappHref} city={city} />
+            <WhatsAppButton city={city} message={message} />
           </div>
         </main>
 
