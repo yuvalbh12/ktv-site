@@ -1,6 +1,26 @@
 import { SERVICES, CITIES } from '../../../constants';
 import Link from 'next/link';
 import WhatsAppButton from '../../../components/WhatsAppButton';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ city: string, service: string }> }): Promise<Metadata> {
+  const { city: rawCity, service: rawService } = await params;
+  const city = decodeURIComponent(rawCity);
+  const service = decodeURIComponent(rawService);
+
+  return {
+    title: `ניקוי חלונות בגובה ב${city} | KTV Israel`,
+    description: `מחפשים ניקוי חלונות בגובה ב${city}? הפתרון המתקדם ביותר עם רחפנים מקצועיים. בטיחות מלאה ותוצאות מושלמות. לחצו לתיאום!`,
+    openGraph: {
+      title: `ניקוי חלונות בגובה ב${city} | KTV Israel`,
+      description: `מחפשים ניקוי חלונות בגובה ב${city}? הפתרון המתקדם ביותר עם רחפנים מקצועיים. בטיחות מלאה ותוצאות מושלמות. לחצו לתיאום!`,
+      url: `https://ktv-site-iota.vercel.app/${encodeURIComponent(city)}/${encodeURIComponent(service)}`,
+      siteName: 'KTV Israel',
+      locale: 'he_IL',
+      type: 'website',
+    },
+  };
+}
 
 export default async function LeadPage({ params }: { params: Promise<{ city: string, service: string }> }) {
   try {
