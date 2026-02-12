@@ -75,40 +75,33 @@ export default async function GeneralCleaningPage({ params }: { params: Promise<
 
           <div className="bg-blue-50 rounded-2xl p-8 mb-12">
             <h3 className="text-2xl font-bold text-slate-900 mb-4">למה לבחור את KTV Israel?</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div>
-                <h4 className="font-bold text-blue-900 mb-2">🛡️ בטיחות מלאה</h4>
-                <p className="text-slate-600">אין עובדים תלויים בין שמיים לארץ. הכל נשלט מהקרקע בבטחון.</p>
-              </div>
-              <div>
-                <h4 className="font-bold text-blue-900 mb-2">⚡ יעילות ומהירות</h4>
-                <p className="text-slate-600">אנחנו מספקים פתרונות מהירים ויעילים שחוסכים זמן יקר.</p>
-              </div>
-              <div>
-                <h4 className="font-bold text-blue-900 mb-2">🌟 תוצאות מושלמות</h4>
-                <p className="text-slate-600">טכנולוגייה מתקדמת מבטיחה ניקוי מושלם בכל פעם.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 mb-12">
-            <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">הטכנולוגיה מאחורי KTV</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white rounded-xl p-6 shadow-lg border border-blue-100">
-                <div className="text-3xl mb-4">🧪</div>
-                <h4 className="font-bold text-blue-900 mb-3">SelfCleaner™</h4>
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  חומר ניקוי בלעדי שמתפרק ביולוגית ושומר על החלון נקי לאורך זמן.
-                </p>
-              </div>
-              <div className="bg-white rounded-xl p-6 shadow-lg border border-blue-100">
-                <div className="text-3xl mb-4">🛠️</div>
-                <h4 className="font-bold text-blue-900 mb-3">KTV Care</h4>
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  תוכניות תחזוקה שנתיות לבנייני משרדים ומוסדות.
-                </p>
-              </div>
-              <div className="bg-white rounded-xl p-6 shadow-lg border border-blue-100">
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 mb-12">
+              <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">טכנולולות מקצועיים</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-blue-100">
+                  <div className="text-3xl mb-4">🧪</div>
+                  <h4 className="font-bold text-blue-900 mb-3">SelfCleaner™ Technology</h4>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                    חומר ניקוי בלעדי שמתפרק ביולוגית. שומר על החלון נקי לאורך זמן ומגן הביצועים.
+                  </p>
+                  <ul className="text-xs text-slate-500 space-y-1">
+                    <li>• הגנה יציבה יותר משך</li>
+                    <li>• בטוח סביבת וידידות</li>
+                    <li>• תוצאה ארוכה</li>
+                  </ul>
+                </div>
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-blue-100">
+                  <div className="text-3xl mb-4">🛠️</div>
+                  <h4 className="font-bold text-blue-900 mb-3">KTV Care Plans</h4>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                    תוכניות תחזוקה שנתיות לבנייני משרדים ומוסדות עם תכניסה מלאה.
+                  </p>
+                  <ul className="text-xs text-slate-500 space-y-1">
+                    <li>• בדיקות ותחזוקה שוטפתית</li>
+                    <li>• תכנוןות תכניסה מלאה</li>
+                    <li>• דוח תקופות וניתוחים</li>
+                  </ul>
+                </div>
                 <div className="text-3xl mb-4">🚁</div>
                 <h4 className="font-bold text-blue-900 mb-3">ניקוי בגובה רב</h4>
                 <p className="text-slate-600 text-sm leading-relaxed">
