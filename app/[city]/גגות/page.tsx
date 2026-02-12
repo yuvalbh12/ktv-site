@@ -172,6 +172,63 @@ export default async function RoofsPage({ params }: { params: Promise<{ city: st
             </div>
           </div>
 
+          <div className="bg-white rounded-2xl p-8 mb-12">
+            <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">גלריית עבודות - רחפנים בפעולה</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="relative group overflow-hidden rounded-xl">
+                <div className="aspect-video bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
+                  <span className="text-6xl text-red-500">🏢</span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
+                  <p className="text-sm font-medium">ניקוי חזיתות זכוכית</p>
+                </div>
+              </div>
+              <div className="relative group overflow-hidden rounded-xl">
+                <div className="aspect-video bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
+                  <span className="text-6xl text-orange-500">🏛️</span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
+                  <p className="text-sm font-medium">הסרת פיח מאבן ירושלים</p>
+                </div>
+              </div>
+              <div className="relative group overflow-hidden rounded-xl">
+                <div className="aspect-video bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center">
+                  <span className="text-6xl text-yellow-500">☀️</span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
+                  <p className="text-sm font-medium">תחזוקת פאנלים סולאריים</p>
+                </div>
+              </div>
+              <div className="relative group overflow-hidden rounded-xl">
+                <div className="aspect-video bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center">
+                  <span className="text-6xl text-pink-500">🧹</span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
+                  <p className="text-sm font-medium">ניקוי חלונות בגובה</p>
+                </div>
+              </div>
+              <div className="relative group overflow-hidden rounded-xl">
+                <div className="aspect-video bg-gradient-to-br from-rose-100 to-rose-200 flex items-center justify-center">
+                  <span className="text-6xl text-rose-500">🔍</span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
+                  <p className="text-sm font-medium">צילום תרמי למבנים</p>
+                </div>
+              </div>
+              <div className="relative group overflow-hidden rounded-xl">
+                <div className="aspect-video bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                  <span className="text-6xl text-amber-500">🏠</span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 text-center">
+                  <p className="text-sm font-medium">בדיקות גגות ומרפסות</p>
+                </div>
+              </div>
+            </div>
+            <p className="text-center text-slate-500 text-sm mt-6">
+              צילומים מפרויקטים אמיתיים של צוות KTV Israel בעבודה
+            </p>
+          </div>
+
           <div className="text-center">
             <h3 className="text-2xl font-bold text-slate-900 mb-4">מוכנים לבדיקת גגות מקצועית ב{city}?</h3>
             <p className="text-slate-600 mb-6">צוות המומחים שלנו מחכה לספק לכם את השירות הטוב ביותר</p>
